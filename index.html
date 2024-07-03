@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comsats CGPA Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <head >
+      <div class="head">
+         <div class="top">
+                <img src="data:image/png;base64,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"
+height="50px">  
+     
+                <a href="https://lahore.comsats.edu.pk/default.aspx" target="_main"> <h1>
+            Comsats CGPA Calculator
+        </h1>
+    </a>
+         </div>   
+       
+  
+      </div>
+      <div class="ribbon">
+       <a href="" onclick="return false;"> <h3 id="r1">CGPA Calculation</h3> </a>
+       <a href="" onclick="return false;"><h3 id="r2">GPA Calculation</h3></a>
+       <a href="" onclick="return false;"> <h3 id="r3">Semester CGPA Calculation</h3> </a>
+      </div>
+    </head>
+     
+    <main>
+        <div class="main-div">
+            <div class="content c1">
+                
+                <div class="data">
+                   <form  id="form-cgpa">
+
+                        <div class="semester">
+                            <h4>Semester 1</h4>
+                            <div class="wrap-input-5" >
+                              
+                                <input class="input" type="number" placeholder="Cgpa" required>
+                                <span class="focus-border"></span>
+        
+                              </div>
+                              <div class="wrap-input-5">
+                                <input class="input" type="number" placeholder="Credit Hours" required>
+                                <span class="focus-border"></span>
+                              </div>
+                         
+                        </div>  
+                       
+                    
+                        <button class="btn-55" id="addsemester"><span>Add Semester</span></button>
+                    </br>
+                        <button class="btn-55" id="calculate" ><span>Calculate</span></button>
+                     
+                    
+                      
+                   </form>
+                </div>
+            </div> 
+             <div class="content c2">
+                <div class="data">
+                    <form  id="form-cgpa2">
+                        <div class="quiz">
+                         
+                         <p>hiddennnnn</p>
+                         <h4>Quiz</h4>
+                         <div class="wrap-input-5" >
+                                             
+                          <input class="input" type="number" placeholder="Marks" id="marksq" required>
+                          <span class="focus-border"></span>
+  
+                    </div>
+                    <div class="wrap-input-5" >
+                                             
+                      <input class="input" type="number" placeholder="Marks" id="marksq" required>
+                      <span class="focus-border"></span>
+
+                </div>
+                <div class="wrap-input-5" >
+                                             
+                  <input class="input" type="number" placeholder="Marks" id="marksq" required>
+                  <span class="focus-border"></span>
+
+            </div>
+            <div class="wrap-input-5" >
+                                             
+              <input class="input" type="number" placeholder="Marks" id="marksq" required>
+              <span class="focus-border"></span>
+
+            </div>                                                                                           
+                        </div>
+
+                        <div class="quiz">
+                         
+                         
+                          <h4>Assignment</h4>
+                          <div class="wrap-input-5" >
+                                              
+                           <input class="input" type="number" placeholder="Marks" id="marksa" required>
+                           <span class="focus-border"></span>
+   
+                     </div>
+                     <div class="wrap-input-5" >
+                                              
+                       <input class="input" type="number" placeholder="Marks" id="marksa" required>
+                       <span class="focus-border"></span>
+ 
+                 </div>
+                 <div class="wrap-input-5" >
+                                              
+                   <input class="input" type="number" placeholder="Marks" id="marksa" required>
+                   <span class="focus-border"></span>
+ 
+             </div>
+             <div class="wrap-input-5" >
+                                              
+               <input class="input" type="number" placeholder="Marks" id="marksa" required>
+               <span class="focus-border"></span>
+ 
+               
+               
+         </div>                                                         
+                                       
+                         </div>
+                         
+                        
+
+                         <div class="quiz">
+                          <h4>Mids</h4>
+                          <div class="wrap-input-5" >
+                                              
+               <input class="input" type="number" placeholder="Marks" id="marksm" required>
+               <span class="focus-border"></span>
+                          </div>    
+                          <div class="wrap-input-5" >
+                                              
+                            <input class="input" type="number" placeholder="Total" id="marksmt" required>
+                            <span class="focus-border"></span>
+                            </div>             
+       
+                         
+                  <h4>Finals</h4>
+                          <div class="wrap-input-5" >
+                                              
+               <input class="input" type="number" placeholder="Marks" id="marksf" required>
+               <span class="focus-border"></span>
+                          </div>    
+                          <div class="wrap-input-5" >
+                                              
+                            <input class="input" type="number" placeholder="Total" id="marksft" required>
+                            <span class="focus-border"></span>
+                            </div>             
+         </div> 
+         <button class="btn-55" id="calculate2" ><span>Calculate</span></button>
+                    </form>
+                </div>
+             </div> 
+            <div class="content c3">
+                <div class="data">
+                   
+
+
+                    <div class="data">
+                        <form  id="form-cgpa3">
+     
+                             <div class="semester">
+                                 <h4>Course 1</h4>
+                                 <div class="wrap-input-5" >
+                                   
+                                     <input class="input" type="number" placeholder="Cgpa" id="cgpa3" required>
+                                     <span class="focus-border"></span>
+             
+                                   </div>
+                                   <div class="wrap-input-5">
+                                     <input class="input" type="number" placeholder="Credit Hours" id="ch3" required>
+                                     <span class="focus-border"></span>
+                                   </div>
+                              
+                             </div>  
+                            
+                         
+                             <button class="btn-55" id="addcourse"><span>Add Course</span></button>
+                         </br>
+                             <button class="btn-55" id="calculate3" ><span>Calculate</span></button>
+                          
+                         
+                           
+                        </form>
+                     </div>
+              
+
+                </div>
+            </div>        
+        </div>
+       
+        <div class="progress-circle">
+           
+            <svg width="100" height="100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke="#ddd" class="progress-background" />
+              
+              <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke="#4CAF50" class="progress-bar" />
+            </svg>
+            <span class="progress-percentage"><h4>0.00</h4></span>
+          </div>
+
+          
+           
+       </div>
+        </div>
+    </main>
+
+
+    <script src="code.js"></script>
+</body>
+</html>
