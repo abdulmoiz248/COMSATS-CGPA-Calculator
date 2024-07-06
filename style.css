@@ -325,9 +325,121 @@ h4{
  visibility: hidden;
 }
 
+.wrap-check-40 .tgl {
+  display: none;
+}
+.wrap-check-40 .tgl,
+.wrap-check-40 .tgl:after,
+.wrap-check-40 .tgl:before,
+.wrap-check-40 .tgl *,
+.wrap-check-40 .tgl *:after,
+.wrap-check-40 .tgl *:before,
+.wrap-check-40 .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.wrap-check-40 .tgl::-moz-selection,
+.wrap-check-40 .tgl:after::-moz-selection,
+.wrap-check-40 .tgl:before::-moz-selection,
+.wrap-check-40 .tgl *::-moz-selection,
+.wrap-check-40 .tgl *:after::-moz-selection,
+.wrap-check-40 .tgl *:before::-moz-selection,
+.wrap-check-40 .tgl + .tgl-btn::-moz-selection,
+.wrap-check-40 .tgl::selection,
+.wrap-check-40 .tgl:after::selection,
+.wrap-check-40 .tgl:before::selection,
+.wrap-check-40 .tgl *::selection,
+.wrap-check-40 .tgl *:after::selection,
+.wrap-check-40 .tgl *:before::selection,
+.wrap-check-40 .tgl + .tgl-btn::selection {
+  background: none;
+}
+.wrap-check-40 .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.wrap-check-40 .tgl + .tgl-btn:after,
+.wrap-check-40 .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.wrap-check-40 .tgl + .tgl-btn:after {
+  left: 0;
+}
+.wrap-check-40 .tgl + .tgl-btn:before {
+  display: none;
+}
+.wrap-check-40 .tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.wrap-check-40 .tgl-ios + .tgl-btn {
+  background: 
+#fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+  border: 1px solid 
+#e8eae9;
+}
+.wrap-check-40 .tgl-ios + .tgl-btn:after {
+  border-radius: 2em;
+  background: 
+#fbfbfb;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px 
+rgba(0, 0, 0, 0.1), 0 4px 0 
+rgba(0, 0, 0, 0.08);
+}
+.wrap-check-40 .tgl-ios + .tgl-btn:hover:after {
+  will-change: padding;
+}
+.wrap-check-40 .tgl-ios + .tgl-btn:active {
+  box-shadow: inset 0 0 0 2em 
+#e8eae9;
+}
+.wrap-check-40 .tgl-ios + .tgl-btn:active:after {
+  padding-right: 0.8em;
+}
+.wrap-check-40 .tgl-ios:checked + .tgl-btn {
+  background: 
+#86d993;
+}
+.wrap-check-40 .tgl-ios:checked + .tgl-btn:active {
+  box-shadow: none;
+}
+.wrap-check-40 .tgl-ios:checked + .tgl-btn:active:after {
+  margin-left: -0.8em;
+}
+
 
 @media(max-width:570px){
    main{
     display: block;
    }
+   .ribbon h3{
+    font-size: 10px;
+   }
+}
+
+#checkbox-div{
+  padding-left: 10px;
+}
+
+.hidden{
+  display: none;
+}
+
+.hidden2{
+  display: none;
 }
