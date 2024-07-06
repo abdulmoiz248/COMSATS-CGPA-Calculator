@@ -311,6 +311,7 @@ function cal_sum(node){
 }
 
 let calculate2=document.querySelector('#calculate2');
+let checkbox=document.querySelector('#cb2-40');
 
 calculate2.addEventListener('click',(e)=>{
    e.preventDefault();
@@ -371,8 +372,72 @@ calculate2.addEventListener('click',(e)=>{
       return;
 
     }
+   if(checkbox.checked){
+    let assl=document.querySelectorAll('#marksal');
 
-   let total=  (cal_sum(quiz)/40)*15+(cal_sum(ass)/40)*10+(mid_no.value/mid_t.value)*25+(final_no.value/final_t.value)*50;
+    for(let v of assl){
+ 
+     if(v.value== '')
+       {
+         alert('Please Enter Lab Assignment Numbers');
+         return;
+   
+       }
+   
+   }
+ 
+    let mid_nol=document.querySelector('#marksml');
+    if(mid_nol.value== '')
+     {
+       alert('Please Enter Lab Mids Number');
+       return;
+ 
+     }
+ 
+    let mid_tl=document.querySelector('#marksmtl');
+    if(mid_tl.value== '')
+     {
+       alert('Please Enter Lab Mid Total Number');
+       return;
+ 
+     }
+ 
+    let final_nol=document.querySelector('#marksfl');
+    if(final_nol.value== '')
+     {
+       alert('Please Enter Lab Finas Number');
+       return;
+ 
+     }
+ 
+    let final_tl=document.querySelector('#marksftl');
+    if(final_tl.value== '')
+     {
+       alert('Please Enter LAB Final Total Number');
+       return;
+ 
+     }
 
-   assign_gpa(total);
+
+     assign_gpa(((cal_sum(quiz)/40)*15+(cal_sum(ass)/40)*10+(mid_no.value/mid_t.value)*25+(final_no.value/final_t.value)*50)*0.75+
+     ((cal_sum(assl)/40)*25+(mid_nol.value/mid_tl.value)*25+(final_nol.value/final_tl.value)*50)*0.25);
+   }else{
+      assign_gpa((cal_sum(quiz)/40)*15+(cal_sum(ass)/40)*10+(mid_no.value/mid_t.value)*25+(final_no.value/final_t.value)*50 );
+   }
+   
+});
+
+
+
+checkbox.addEventListener('change',(e)=>{
+  let hidden=document.querySelector('#lab1');
+  let hidden2=document.querySelector('#lab2');
+      if(checkbox.checked){
+        hidden.classList.remove('hidden');
+        hidden2.classList.remove('hidden2');
+      }else   {
+  
+        hidden.classList.add('hidden');
+        hidden2.classList.add('hidden2');
+      }
 });
