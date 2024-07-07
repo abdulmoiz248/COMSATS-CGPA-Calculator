@@ -152,6 +152,10 @@ button1.addEventListener('click',(e)=>{
     let form=document.querySelector('#form-cgpa');
      
     form.insertBefore(semester,button1);
+    if(semester_count==2){
+      let removecourse=document.querySelector('#removesem');
+      removecourse.style.display='block';    
+     }
   
 
 })
@@ -216,7 +220,7 @@ let course=1;
 let input3=1;
 course_add.addEventListener('click',(e)=>{
      e.preventDefault();
-   
+     
     let semester=document.createElement('div');
     semester.classList.add('semester');
     let h4= document.createElement('h4');
@@ -251,8 +255,31 @@ course_add.addEventListener('click',(e)=>{
     let form=document.querySelector('#form-cgpa3');
      
     form.insertBefore(semester,course_add);
+   if(course==2){
+    let removecourse=document.querySelector('#removecourse');
+    removecourse.style.display='block';    
+   }
+    
 });
 
+let removecourse=document.querySelector('#removecourse');
+removecourse.addEventListener('click',(e)=>{
+  e.preventDefault();
+  course--;
+  if(course==1) removecourse.style.display='none';
+  course_add.previousSibling.remove();
+
+});
+
+
+let removesem=document.querySelector('#removesem');
+removesem.addEventListener('click',(e)=>{
+  e.preventDefault();
+  semester_count--;
+  if(semester_count==1) removesem.style.display='none';
+  button1.previousSibling.remove();
+
+});
 
 let calculate3=document.querySelector('#calculate3');
 calculate3.addEventListener('click',(e)=>{
@@ -441,3 +468,5 @@ checkbox.addEventListener('change',(e)=>{
         hidden2.classList.add('hidden2');
       }
 });
+
+
