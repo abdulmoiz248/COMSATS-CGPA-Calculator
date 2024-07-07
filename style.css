@@ -443,3 +443,14 @@ rgba(0, 0, 0, 0.08);
 .hidden2{
   display: none;
 }
+
+#removecourse{
+  margin-top: 10px;
+  display: none;
+}
+
+
+#removesem{
+  margin-top: 10px;
+  display: none;
+}
